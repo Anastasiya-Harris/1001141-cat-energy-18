@@ -47,9 +47,20 @@
       </fieldset>
 
       <fieldset class="form__fieldset">
-          <label class="form__label form__label--radio"><input class="form__control form__control--radio" type="radio" name="goal" value="weight-loss" checked>Похудение</label>
-          <label class="form__label form__label--radio"><input class="form__control form__control--radio" type="radio" name="goal" value="weight-gain">Набор массы</label>
-          <label class="form__label form__label--radio"><input class="form__control form__control--radio" type="radio" name="goal" value="do-not-now">Не знаю (нужен ваш совет)</label>
+        <ul>
+          <li class="form__option">
+            <input class="form__control form__control--radio" type="radio" name="goal" value="weight-loss" checked>
+            <label class="form__label form__label--radio">Похудение</label>
+          </li>
+          <li>
+            <input class="form__control form__control--radio" type="radio" name="goal" value="weight-gain">
+            <label class="form__label form__label--radio">Набор массы</label>
+          </li>
+          <li>
+            <input class="form__control form__control--radio" type="radio" name="goal" id="goal" value="do-not-now">
+            <label for="goal" class="form__label form__label--radio">Не знаю (нужен ваш совет)</label>
+          </li>
+        </ul>
       </fieldset>
 
       <fieldset class="form__fieldset">
@@ -68,17 +79,27 @@
 
       <fieldset class="form__fieldset">
         <legend class="form__legend">Дополнительно</legend>
-        <label class="form__label form__label--checkbox"><input class="form__control form__control--checkbox" type="checkbox" name="additional" value ="Sweetener" checked>Сахарозаменитель</label>
-        <label class="form__label form__label--checkbox"><input class="form__control form__control--checkbox" type="checkbox" name="additional" value ="Drinking-water">Питьевая вода</label>
-
-        <label class="form__label form__label--checkbox"><input class="form__control form__control--checkbox" type="checkbox" name="additional" value ="Milk">Молоко</label>
-        <label class="form__label form__label--checkbox"><input class="form__control form__control--checkbox" type="checkbox" name="additional" value ="Vitamins">Витамины</label>
+        <ul>
+          <li>
+            <input class="form__control form__control--checkbox" type="checkbox" name="additional" value ="Sweetener" checked>
+            <label class="form__label form__label--checkbox">Сахарозаменитель</label>
+          </li>
+          <li>
+            <input class="form__control form__control--checkbox" type="checkbox" name="additional" value ="Drinking-water">
+            <label class="form__label form__label--checkbox">Питьевая вода</label>
+          </li>
+          <li>
+            <input class="form__control form__control--checkbox" type="checkbox" name="additional" value ="Milk">
+            <label class="form__label form__label--checkbox">Молоко</label>
+          </li>
+          <li>
+            <input class="form__control form__control--checkbox" type="checkbox" name="additional" value ="Vitamins">
+            <label class="form__label form__label--checkbox">Витамины</label>
+          </li>
+        </ul>
       </fieldset>
-
-      <div class="buttons">
         <!-- Кнопка -->
-        <button type="submit">Отправить заявку</button>
-      </div>
+      <button class="form__button button" type="submit">Отправить заявку</button>
     </form>
     <p class="form__legend">* — Обязательные поля</p>
   </main>
@@ -116,11 +137,3 @@
   </footer>
   </body>
 </html>
-<!--@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 400;
-  src:
-    local("Oswald Regular"),
-    url("oswald.woff") format("woff");
-}-->
