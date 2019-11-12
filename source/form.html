@@ -33,11 +33,55 @@
   </header>
 
   <main class="form-page">
-    <h2 class="form__title heading2">Подбор программы</h2>
-    <form>
+    <h2 class="form-page__title heading2">Подбор программы</h2>
+    <p class="form-page__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</p>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <fieldset>
+        <label for="name">Имя:*</label>
+        <input type="text" id="name" name="name" value="Барсик" required>
 
+        <label for="weight">Вес (кг):*</label>
+        <input type="number" id="weight" name="weight" value="7" required>
+
+        <label for="age">Возраст (лет):</label>
+        <input type="number" id="age" name="age" value="7">
+      </fieldset>
+
+      <fieldset>
+          <label><input type="radio" name="goal" value="weight-loss" checked>Похудение</label>
+          <label><input type="radio" name="goal" value="weight-gain">Набор массы</label>
+          <label><input type="radio" name="goal" value="do-not-now">Не знаю (нужен ваш совет)</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Контактные данные (владельца кота)</legend>
+        <label for="email">Имя:*</label>
+        <input type="email" id="email" name="email" value="Kuklachev@gmail.com" required>
+
+        <label for="tel">Телефон:*</label>
+        <input type="tel" id="tel" name="tel" value="8 (960) 900-60-90" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Комментарий</legend>
+        <textarea>Расскажите обо всех повадках кота</textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Дополнительно</legend>
+        <label><input type="checkbox" name="additional" value ="Sweetener" checked>Сахарозаменитель</label>
+        <label><input type="checkbox" name="additional" value ="Drinking-water">Питьевая вода</label>
+
+        <label><input type="checkbox" name="additional" value ="Milk">Молоко</label>
+        <label><input type="checkbox" name="additional" value ="Vitamins">Витамины</label>
+      </fieldset>
+
+      <div class="buttons">
+        <!-- Кнопка -->
+        <button type="submit">Отправить заявку</button>
+      </div>
     </form>
-
+    <p class="form-page__legend">* — Обязательные поля</p>
   </main>
   <footer class="page-footer">
     <div class="page-footer__wrapper">
@@ -73,3 +117,11 @@
   </footer>
   </body>
 </html>
+<!--@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Oswald Regular"),
+    url("oswald.woff") format("woff");
+}-->
