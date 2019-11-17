@@ -15,16 +15,16 @@
         </picture>
       </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list pages-list">
-          <li class="main-nav__item">
+          <li class="pages-list__item">
             <a href="index.html">Главная</a>
           </li>
-          <li class="main-nav__item">
+          <li class="pages-list__item">
             <a href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="main-nav__item main-nav__item--active">
+          <li class="pages-list__item pages-list__item--active">
             <a href="#">Подбор программы</a>
         </ul>
       </div>
@@ -105,40 +105,39 @@
     <p class="form-page__legend">* — Обязательные поля</p>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__wrapper">
       <div class="page-footer__map">
-        <img src="https://via.placeholder.com/320x360" width="320" height="360" alt="Карта">
-        <div class="page-footer__contacts contacts">
-          <h4 class="page-footer__call-to-action heading4">Приглашаем к сотрудничеству дилеров! </h4>
+        <img src="img/bg-map-mobile@1x.png" width="320" height="360" alt="Карта">
+        <div class="page-footer__contacts page-footer__contacts--inner-page contacts">
+          <h4 class="contact__call-to-action heading4">Приглашаем к сотрудничеству дилеров! </h4>
           <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
           </address>
         </div>
       </div>
-      <img class="page-footer__logo logo-image" src="https://via.placeholder.com/128x24" width="128" height="24" alt="Cat-energy логотип">
 
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Vkontakte</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Instagram</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Facebook</a>
-          </li>
-        </ul>
-      </div>
+      <div class="page-footer__wrapper">
+        <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Cat-energy логотип">
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Vkontakte</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Instagram</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Facebook</a>
+            </li>
+          </ul>
+        </div>
 
-      <div class="page-footer__copyright copyright">
+        <div class="page-footer__copyright copyright">
           <a class="copyright__author" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg class="logo-htmlacademy" width="27" height="34">
-                <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
-            </svg>
+            <img class="logo-htmlacademy" width="27" height="34" src="img/htmlacademy.svg" alt="Сделано в HTML Academy"></img>
           </a>
         </div>
       </div>
-    </footer>
+
+  </footer>
   </body>
 </html>
