@@ -41,33 +41,32 @@ a {
 }
 
 .heading2 {
-  font-family: @title-font;
-  font-size: 36px;
-  line-height: 60px;
-  font-weight: 400;
-  color: @black;
+  .font(@title-font;
+  36px;
+  60px;
+  400;
+  @black)
 }
 
 .heading3 {
-  font-family: @title-font;
-  font-size: 24px;
-  line-height: 36px;
-  font-weight: 400;
-  color: @black;
+  .font(@title-font;
+  24px;
+  36px;
+  400;
+  @black);
   text-transform: uppercase;
+}
 
   // @media (max-width: @mobile-widths-only) {
   //   font-size: 24px;
   // }
-}
 
 .heading4 {
-  font-family: @title-font;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-
-  color: @black;
+  .font(@title-font;
+  16px;
+  20px;
+  400;
+  @black);
   text-transform: uppercase;
 }
 
