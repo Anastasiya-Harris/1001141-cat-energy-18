@@ -1,0 +1,78 @@
+//*Принудительное наследование Бордербокс*//
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+//  .content-box-component {
+//   box-sizing: content-box;
+//  }
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  font-family: @main-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: @gray-text;
+
+  background-color: @white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  text-decoration-color: none;
+}
+
+.visually-hidden {
+  visibility: hidden;
+}
+
+.heading2 {
+  .font(@title;
+  36px;
+  60px;
+  400;
+  @black);
+}
+
+.heading3 {
+  .font(@title;
+  24px;
+  36px;
+  400;
+  @black);
+  text-transform: uppercase;
+}
+
+// @media (max-width: @mobile-widths-only) {
+//   font-size: 24px;
+// }
+
+.heading4 {
+  .font(@title;
+  16px;
+  20px;
+  400;
+  @black);
+  text-transform: uppercase;
+}
+
+/* Позиционирование */
+/* Блочная модель  display: block;  float: right;  width: 100px;  height: 100px;  margin: 10px;  padding: 10px;*/
+/* Типографика */
+/* Оформление */
+/* Анимация */
+/* Разное */

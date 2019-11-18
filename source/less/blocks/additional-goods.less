@@ -1,0 +1,70 @@
+.additional-goods {
+  margin-bottom: 35px;
+}
+
+.additional-goods__title {
+  border-bottom: 1px solid @dark-gray;
+
+  &--heading3 {
+    text-transform: none;
+    line-height: 24px;
+  }
+}
+
+.additional-goods__list {
+  margin: 14px;
+}
+
+.additional-goods__item {
+  line-height: 14px;
+  border-bottom: 1px solid @dark-gray;
+}
+
+.additional-goods__item-title {
+  .font(@title;
+  16px;
+  16px;
+  400;
+  @black);
+
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.additional-goods__offer {
+  padding-top: 186px;
+  padding-bottom: 43px;
+  background-color: @green;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 280px auto;
+  background-position: center top;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+    background-size: 280px auto;
+  }
+}
+
+.additional-goods__offer-text {
+  position: relative;
+  width: 163px;
+  padding: 0;
+  margin: -20px auto;
+  font-size: 16px;
+  line-height: 20px;
+  color: @white;
+  text-align: center;
+}
+
+.additional-goods__offer-text::before {
+  position: absolute;
+  content: "";
+  top: -165px;
+  left: 35%;
+  align-content: center;
+  width: 55px;
+  height: 60px;
+  background-image: url("../img/icon-gift.svg");
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,48 @@
+//* Button less*//
+.button {
+  padding: 8px;
+
+  font-family: @title;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+
+  text-align: center;
+  color: @white;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: @green;
+  border: none;
+
+  &--small {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 10px;
+  }
+
+  &:active {
+    color: @white-opacity30;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @dark-green;
+  }
+}
+
+.button--gray {
+  color: @gray-text;
+  background-color: @gray;
+
+  &:hover,
+  &:focus {
+    color: @gray-text;
+    background-color: @dark-gray;
+  }
+
+  &:active {
+    color: @gray-text-opacity30;
+    background-color: @dark-gray;
+  }
+}
