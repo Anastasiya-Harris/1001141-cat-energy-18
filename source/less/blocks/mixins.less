@@ -15,3 +15,12 @@
   margin: @marg;
   padding: @padd;
 }
+
+.no-outline() {
+  outline: none;
+  background-color: transparent;
+
+  &::before {
+    display: none;
+  }
+}
