@@ -1,7 +1,72 @@
-// main-nav
+.main-nav {
+  /*Временно для сетки*/
+  min-height: 198px;
+  margin: 0 auto;
+  flex-direction: row;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
+}
+
+.main-nav__list {
+  .list-reset;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__list {
+    /*Временно для сетки*/
+    min-height: 59px;
+
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__list {
+    /*Временно для сетки*/
+    min-height: 60px;
+  }
+}
+
 .main-nav__toggle {
-  position: relative;
-  width: 26px;
-  height: 26px;
-  background-color: transparent;
+  display: none;
+}
+
+// .main-nav__toggle {
+//   margin-top: -26px;
+//   position: relative;
+//   width: 26px;
+//   height: 26px;
+//   background-color: transparent;
+// }
+
+.main-nav__item {
+  background-color: @white;
+  border-bottom: 1px solid @dark-gray;
+  padding: 20px 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.main-nav__link {
+  font: inherit;
+  text-align: center;
+  color: @black;
+
+  font-size: 20px;
+  line-height: 20px;
+  font-family: @title;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  &:hover {
+    color: @black-opacity60;
+  }
+
+  &:active {
+    color: @black-opacity30;
+  }
 }
