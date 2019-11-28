@@ -38,12 +38,16 @@
 
   <main class="page-main">
     <section class="page-main__banner banner">
-      <div class="banner__wrapper">
+      <div class="banner__container">
         <h1 class="banner__title banner__heading">Функциональное питание для котов</h1>
         <p class="banner__caption ">Занялся собой? Займись котом!</p>
+        <picture class="banner__image-container">
+          <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/index-can-desktop@1x.png">
+          <img class="banner__image" src="img/index-can-mobile@1x.png" width="280" height="271" alt="Банка Cat-energy с курицей">
+        </picture>
+        <a class="banner__button button" href="form.html">Подобрать программу</a>
       </div>
-      <img class="banner__image" src="img/index-can-mobile@1x.png" width="280" height="271" alt="Банка Cat-energy с курицей">
-      <a class="banner__button button button--small" href="form.html">Подобрать программу</a>
     </section>
     <section class="programms">
       <h2 class="visually-hidden">Выбор программ</h2>
