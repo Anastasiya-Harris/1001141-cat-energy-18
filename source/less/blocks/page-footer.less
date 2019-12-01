@@ -1,8 +1,12 @@
 .page-footer {
+  width: 320px;
+  margin: 0 auto;
   background-color: @gray;
 }
 
 .page-footer__contacts {
+  display: flex;
+
   padding: 20px;
   background-color: @white;
 
@@ -11,12 +15,22 @@
   }
 }
 
-.page-footer__logo {
-  padding: 40px 20px 31px;
+.contact__call-to-action {
+  .mp-reset;
+}
 
+.page-footer__wrapper {
+  margin: 0 auto;
   border-bottom: 1px solid @dark-gray;
+  display: block;
+}
+
+.page-footer__logo {
+  margin: 0 auto;
+  padding: 0px 20px;
 }
 
 .page-footer__copyright {
+
   padding: 22px 20px;
 }

@@ -1,0 +1,146 @@
+.program {
+  margin: 0 auto;
+  width: 280px;
+  margin-bottom: 40px;
+}
+
+.program__list {
+  // box-sizing: content-box;
+  .list-reset;
+  margin: 0 20px;
+}
+
+.program__item {
+  position: relative;
+  padding: 5px 0 22px;
+  margin-bottom: 20px;
+
+  background-color: @gray;
+}
+
+.program__item-title {
+  position: absolute;
+  top: 5px;
+  left: 75px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -73px;
+    width: 50px;
+    height: 51px;
+    background-color: @green;
+    border-radius: 50%;
+  }
+
+  &--pro {
+    content: url("img/icon-cat-pro.svg");
+    position: absolute;
+    top: 5px;
+    left: 75px;
+  }
+}
+
+.program__item-description {
+  margin-bottom: 28px;
+  padding-top: 76px;
+}
+
+.program__item-link {
+  .font(@title;
+  16px;
+  16px;
+  400;
+  @black);
+
+  text-transform: uppercase;
+
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 12px;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .program {
+    width: 708px;
+  }
+
+  .program__item {
+    padding: 42px 32px 50px;
+    margin-bottom: 30px;
+    min-height: 372px;
+
+    background-color: @gray;
+  }
+
+  .program__item-title {
+    top: 36px;
+    left: 33px;
+    font-size: 36px;
+    line-height: 37px;
+
+    &::before {
+      content: "";
+      width: 200px;
+      height: 200px;
+      left: 393px;
+      top: 15px;
+    }
+  }
+
+  .program__item-description {
+    font-size: 16px;
+    line-height: 24px;
+    width: 380px;
+    padding-bottom: 28px;
+  }
+
+  .program__item-link {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program {
+    width: 1220px;
+  }
+
+  .program__list {
+    display: flex;
+    margin: 0 auto;
+    width: 1220px;
+    margin-bottom: 40px;
+  }
+
+  .program__item {
+    width: 570px;
+    padding: 95px 47px 50px;
+    margin-right: 80px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .program__item-title {
+    position: absolute;
+    padding-left: 140px;
+    top: 40px;
+
+    &::before {
+      content: "";
+      width: 100px;
+      height: 100px;
+      left: 18px;
+      top: -30px;
+    }
+  }
+}
