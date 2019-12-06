@@ -8,7 +8,7 @@
   </head>
   <body class="page catalog-page">
     <header class="page-header">
-      <div class="page-header__container">
+      <div class="page-header__container page-header__container--inner">
         <div class="page-header__wrapper">
           <a class="page-header__logo" href="index.html">
             <picture>
@@ -19,16 +19,16 @@
           </a>
           <button class="page-header__toggle page-header__toggle--opened" type="button"><span class="visually-hidden">Меню</span></button>
         </div>
-        <nav class="main-nav main-nav--show">
+        <nav class="main-nav main-nav--show main-nav--inner">
             <ul class="main-nav__list pages-list">
               <li class="main-nav__item">
-                <a class="main-nav__link" href="index.html">Главная</a>
+                <a class="main-nav__link main-nav__link--inner" href="index.html">Главная</a>
               </li>
               <li class="main-nav__item  main-nav__item--active">
-                <a class="main-nav__link main-nav__link--active">Каталог продукции</a>
+                <a class="main-nav__link main-nav__link--inner main-nav__link--active">Каталог продукции</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="form.html">Подбор программы</a>
+                <a class="main-nav__link main-nav__link--inner" href="form.html">Подбор программы</a>
             </ul>
         </nav>
       </div>
@@ -241,12 +241,12 @@
             <a class="catalog__item-button button" href="form.html">Заказать</a>
           </li>
 
-          <li class="catalog__show-more">
+          <li class="catalog__item catalog__show-more">
             <a href="#">
               <h2 class="catalog__show-more-title heading4">Показать еще 100500 товаров</h2>
             </a>
             <p class="catalog__show-more-comment">На самом деле вкусов гораздо больше!</p>
-            <a class="button button--gray" href="form.html">Показать все</a>
+            <a class="button catalog__item-button--gray" href="form.html">Показать все</a>
           </li>
         </ul>
       </section>

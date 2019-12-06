@@ -1,5 +1,6 @@
 .additional-goods {
   margin-bottom: 35px;
+  width: 280px;
 }
 
 .additional-goods__title {
@@ -67,4 +68,49 @@
   height: 60px;
   background-image: url("../img/icon-gift.svg");
   background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .additional-goods {
+    width: 708px;
+    margin: 0 auto;
+  }
+
+  .additional-goods__list {
+    width: 708px;
+  }
+
+  .additional-goods__offer {
+    min-height: 200px;
+    background-color: @green;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 708px auto;
+    background-position: center top;
+    border-top: 1px solid transparent;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/gift-photo-tablet@1x.jpg");
+      background-size: 708px auto;
+    }
+  }
+  .additional-goods__offer-text {
+    width: 163px;
+    padding: 0;
+    margin: 60px auto 43px;
+    text-align: left;
+    margin-right: 40px;
+  }
+
+  .additional-goods__offer-text::before {
+    position: absolute;
+    content: "";
+    top: auto;
+    left: -100px;
+    align-content: center;
+    width: 55px;
+    height: 60px;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+  }
 }
