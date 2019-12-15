@@ -7,9 +7,7 @@
   width: 320px;
   padding-top: 26px;
 
-  background-color: #63a73a;
-  background: url("../img/index-background-mobile@1x.jpg");
-  background-color: linear-gradient(to right, transparent 50%, #65a93c 50%);;
+  background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: center;
@@ -127,10 +125,11 @@
     display: block;
     padding-top: 138px;
     margin-bottom: 80px;
+    margin-top: 0;
+    height: 696px;
+    width: 100%;
+    background-image: linear-gradient(to right, transparent 50%, #65a93c 50%);
 
-    // background-image: url("../img/index-background-desktop@1x.jpg");
-    // background-position: right;
-    // background-repeat: no-repeat;
     // background-color: linear-gradient(to right, transparent 50%, #65a93c 50%);
 
     height: 696px;
@@ -140,17 +139,29 @@
   .banner__container {
     position: relative;
     width: 1220px;
+    height: 696px;
     padding-left: 80px;
     padding-top: 85px;
+    margin-top: -137px;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
   }
+
+  // .banner__background {
+  //   height: 696px;
+  //   width: 100%;
+  //   background-image: linear-gradient(to right, transparent 50%, #65a93c 50%);
+  //   margin-top: -658px;
+  //   order: 3;
+  // }
 
   .banner__heading {
     padding: 0;
   }
 
   .banner__title {
-    margin: 0;
-    margin-bottom: 40px;
+    margin: 137px 0 40px 0;
   }
 
   .banner__caption {
@@ -167,6 +178,7 @@
   .banner__image {
     width: 552px;
     height: 499px;
+    margin-top: 150px;
   }
 
   .banner__button {
