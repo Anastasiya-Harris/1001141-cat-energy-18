@@ -129,11 +129,13 @@
 @media (min-width: @desktop-width) {
   .page-footer {
     width: 100%;
+    position: relative;
   }
 
   .page-footer__contacts {
+    position: absolute;
     order: 0;
-    margin-top: -300px;
+    margin-top: 100px;
     margin-left: 110px;
     padding: 66px 64px 62px;
     width: 570px;
@@ -146,19 +148,25 @@
 
   .page-footer__map-image {
     background-image: url("../../img/bg-map-desktop@1x.png");
-    background-size: auto;
+    background-size: cover;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../../img/bg-map-desktop@2x.png");
+      background-image: url("../../img/bg-map-desktop@1x.png");
     }
   }
 
   .page-footer__wrapper {
-    margin: 0 100px;
+    width: 1220px;
+    margin: 0 156px;
+    height: 150px;
+    padding-bottom: 38px;
   }
 
   .page-footer__logo {
     margin: 0;
     padding: 30px 0 31px;
+  }
+  .page-footer__social {
+    padding-top: 30px;
   }
 }

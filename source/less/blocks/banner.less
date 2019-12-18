@@ -122,18 +122,16 @@
 @media (min-width: @desktop-width) {
   .banner {
     position: relative;
+    z-index: 1;
     display: block;
     padding-top: 138px;
     margin-bottom: 80px;
     margin-top: 0;
     height: 696px;
     width: 100%;
-    background-image: linear-gradient(to right, transparent 50%, #65a93c 50%);
-
-    // background-color: linear-gradient(to right, transparent 50%, #65a93c 50%);
-
-    height: 696px;
-    z-index: 1;
+    background-image: url("../img/index-background-desktop@1x.jpg"), linear-gradient(to right, transparent 50%, #65a93c 50%);
+    background-position: 82%;
+    background-repeat: no-repeat;
   }
 
   .banner__container {
@@ -143,18 +141,8 @@
     padding-left: 80px;
     padding-top: 85px;
     margin-top: -137px;
-    background-image: url("../img/index-background-desktop@1x.jpg");
-    background-position: right;
-    background-repeat: no-repeat;
-  }
+   }
 
-  // .banner__background {
-  //   height: 696px;
-  //   width: 100%;
-  //   background-image: linear-gradient(to right, transparent 50%, #65a93c 50%);
-  //   margin-top: -658px;
-  //   order: 3;
-  // }
 
   .banner__heading {
     padding: 0;
@@ -172,7 +160,7 @@
   .banner__image-container {
     position: absolute;
     right: 218px;
-    top: 83px;
+    top: 72px;
   }
 
   .banner__image {
