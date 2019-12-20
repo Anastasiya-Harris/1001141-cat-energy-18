@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page">
+  <body class="page form-temporary" >
     <header class="page-header">
       <div class="page-header__container">
         <div class="page-header__wrapper">
@@ -49,9 +49,9 @@
         <input class="form__control form__control--text" type="number" id="age" name="age" placeholder="7">
       </fieldset>
 
-      <fieldset class="form__fieldset">
-        <ul>
-          <li class="form__option">
+      <fieldset class="form__fieldset form__fieldset--border">
+        <ul class="form__list">
+          <li>
             <input class="form__control form__control--radio" type="radio" name="goal" value="weight-loss" checked>
             <label class="form__label form__label--radio">Похудение</label>
           </li>
@@ -82,7 +82,7 @@
 
       <fieldset class="form__fieldset">
         <legend class="form__legend">Дополнительно</legend>
-        <ul>
+        <ul class="form__list">
           <li>
             <input class="form__control form__control--checkbox" type="checkbox" name="additional" value ="Sweetener" checked>
             <label class="form__label form__label--checkbox">Сахарозаменитель</label>
@@ -99,7 +99,7 @@
             <input class="form__control form__control--checkbox" type="checkbox" name="additional" value ="Vitamins">
             <label class="form__label form__label--checkbox">Витамины</label>
           </li>
-        </ul>
+        </ul class="form__option">
       </fieldset>
         <!-- Кнопка -->
       <button class="form__button button" type="submit">Отправить заявку</button>
