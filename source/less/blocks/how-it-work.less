@@ -7,9 +7,10 @@
   margin: 0;
 }
 
-.how-it-work-title {
+.how-it-work__title {
   .mp-reset;
-  margin-bottom: 26px;
+  margin-top: -14px;
+  margin-bottom: 30px;
 }
 
 .how-it-work__list {
@@ -18,8 +19,14 @@
 }
 
 .how-it-work__description {
-  padding: 0 0 27px 80px;
+  padding: 0 0 26px 80px;
+}
 
+.how__br {
+  display: none;
+}
+
+.how-it-work__description--healthy {
 
   &::before {
     content: "";
@@ -30,6 +37,96 @@
     width: 60px;
     height: 60px;
     background-color: @green;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/advantage-leaf@1x.png);
+    background-repeat: no-repeat;
+  }
+}
+
+.how-it-work__description--water {
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    // top: 4px;
+    width: 60px;
+    height: 60px;
+    background-color: @green;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 84px;
+    left: 6px;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/advantage-powder@1x.png);
+    background-repeat: no-repeat;
+  }
+}
+
+.how-it-work__description--food {
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    // top: 4px;
+    width: 60px;
+    height: 60px;
+    background-color: @green;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 164px;
+    left: 4px;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/advantage-dining@1x.png);
+    background-repeat: no-repeat;
+  }
+}
+
+.how-it-work__description--time {
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    // top: 4px;
+    width: 60px;
+    height: 60px;
+    background-color: @green;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 244px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/advantage-clock@1x.png);
+    background-repeat: no-repeat;
   }
 }
 
@@ -56,16 +153,97 @@
   }
 
   .how-it-work__description {
-    padding: 186px 60px 59px 0;
+    padding: 185px 52px 59px 0;
+    margin-right: 83px;
     width: 300px;
     font-size: 16px;
     line-height: 24px;
 
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  .how__br {
+    display: initial;
+  }
+
+  .how-it-work__description--healthy {
+
     &::before {
       content: "";
-      left: auto;
+      top: 72px;
       width: 80px;
       height: 80px;
+    }
+
+    &::after {
+      content: "";
+      top: 87px;
+      left: 15px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .how-it-work__description--water {
+
+    &::before {
+      content: "";
+      top: 72px;
+      left: 380px;
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      content: "";
+      top: 85px;
+      left: 397px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .how-it-work__description--food {
+
+    &::before {
+      content: "";
+      top: 389px;
+      left: 384px;
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      z-index: 2;
+      top: 402px;
+      left: 14px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .how-it-work__description--time {
+
+    &::before {
+      content: "";
+      top: 389px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      content: "";
+      z-index: 2;
+      top: 402px;
+      left: 398px;
+      width: 50px;
+      height: 50px;
     }
   }
 }
@@ -87,11 +265,90 @@
 
   .how-it-work__description {
     padding: 184px 0 0 0;
-    margin-right: 100px;
+    margin-right: 78px;
     width: 250px;
 
-    &:nth-child(4) {
+    &:nth-child(2n) {
+      margin-right: 78px;
+    }
+
+    &:nth-child(4n) {
       margin-right: 0;
+    }
+  }
+
+  .how-it-work__description--healthy {
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 71px;
+      width: 80px;
+      height: 80px;
+      background-color: @green;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      z-index: 2;
+      top: 87px;
+      left: 14px;
+      width: 50px;
+      height: 50px;
+      background-image: url(../img/advantage-leaf@1x.png);
+      background-repeat: no-repeat;
+    }
+  }
+
+  .how-it-work__description--water {
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 71px;
+      left: 324px;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 85px;
+      left: 339px;
+    }
+  }
+
+  .how-it-work__description--food {
+
+    &::before {
+      content: "";
+      top: 71px;
+      left: 650px;
+    }
+
+    &::after {
+      content: "";
+      top: 86px;
+      left: 662px;
+    }
+  }
+
+  .how-it-work__description--time {
+
+    &::before {
+      content: "";
+      top: 71px;
+      left: 974px;
+    }
+
+    &::after {
+      content: "";
+      top: 86px;
+      left: 988px;
     }
   }
 }
