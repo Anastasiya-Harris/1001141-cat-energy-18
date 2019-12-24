@@ -3,34 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page">
+  <body class="page form-temporary" >
     <header class="page-header">
-      <a class="page-header__logo">
-        <picture>
-          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип магазина 'Cat Energy'">
-        </picture>
-      </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle visually-hidden" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list pages-list">
-          <li class="pages-list__item">
-            <a class="pages-list__link" href="index.html">Главная</a>
-          </li>
-          <li class="pages-list__item">
-            <a class="pages-list__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="pages-list__item">
-            <a class="pages-list__link pages-list__link--active" href="#">Подбор программы</a>
-        </ul>
+      <div class="page-header__container">
+        <div class="page-header__wrapper">
+          <a class="page-header__logo" href="index.html">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип магазина 'Cat Energy'">
+            </picture>
+          </a>
+          <button class="page-header__toggle page-header__toggle--opened" type="button"><span class="visually-hidden">Меню</span></button>
+        </div>
+        <nav class="main-nav main-nav--show main-nav--inner">
+            <ul class="main-nav__list pages-list">
+              <li class="main-nav__item">
+                <a class="main-nav__link main-nav__link--inner" href="index.html">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link main-nav__link--inner" href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="main-nav__item main-nav__item--active main-nav__item--active-inner">
+                <a class="main-nav__link  main-nav__link--inner main-nav__link--active">Подбор программы</a>
+            </ul>
+        </nav>
       </div>
-    </nav>
-    <h1 class="visually-hidden">Подбор программы функционального питания для котов</h1>
-  </header>
+    </header>
 
   <main class="form-page">
     <h2 class="form-page__title heading2">Подбор программы</h2>
@@ -47,9 +49,9 @@
         <input class="form__control form__control--text" type="number" id="age" name="age" placeholder="7">
       </fieldset>
 
-      <fieldset class="form__fieldset">
-        <ul>
-          <li class="form__option">
+      <fieldset class="form__fieldset form__fieldset--border">
+        <ul class="form__list">
+          <li>
             <input class="form__control form__control--radio" type="radio" name="goal" value="weight-loss" checked>
             <label class="form__label form__label--radio">Похудение</label>
           </li>
@@ -80,7 +82,7 @@
 
       <fieldset class="form__fieldset">
         <legend class="form__legend">Дополнительно</legend>
-        <ul>
+        <ul class="form__list">
           <li>
             <input class="form__control form__control--checkbox" type="checkbox" name="additional" value ="Sweetener" checked>
             <label class="form__label form__label--checkbox">Сахарозаменитель</label>
@@ -97,7 +99,7 @@
             <input class="form__control form__control--checkbox" type="checkbox" name="additional" value ="Vitamins">
             <label class="form__label form__label--checkbox">Витамины</label>
           </li>
-        </ul>
+        </ul class="form__option">
       </fieldset>
         <!-- Кнопка -->
       <button class="form__button button" type="submit">Отправить заявку</button>

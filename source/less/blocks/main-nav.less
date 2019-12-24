@@ -1,7 +1,135 @@
-// main-nav
-.main-nav__toggle {
-  position: relative;
-  width: 26px;
-  height: 26px;
-  background-color: transparent;
+.main-nav {
+  display: none;
+  width: 100%;
+}
+
+.main-nav--show {
+  display: block;
+}
+
+.main-nav__list {
+  .mp-reset;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.main-nav__item {
+  display: block;
+  padding: 21px 0;
+  list-style: none;
+  text-align: center;
+  border-bottom: 1px solid @dark-gray;
+}
+
+.main-nav__link {
+  font: inherit;
+
+  .font(@title;
+  20px;
+  20px;
+  500;
+  @black);
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: @black-opacity60;
+  }
+
+  &:active {
+    color: @black-opacity30;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    display: flex;
+    margin-left: auto;
+    width: auto;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-width: 440px;
+    margin-bottom: -20px;
+    border-top: none;
+  }
+
+  .main-nav__item {
+    margin-bottom: 20px;
+    padding: 0;
+    border-bottom: 0 none;
+  }
+
+  .main-nav__item--active {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -9px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #68b738;
+    }
+  }
+
+  .main-nav__link {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;
+    // text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__list {
+    min-width: 480px;
+  }
+
+  .main-nav__item--active {
+    &::after {
+      background-color: @white;
+    }
+  }
+
+  .main-nav__item--active-inner {
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -9px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: @green;
+    }
+  }
+
+  .main-nav__link {
+    font-size: 20px;
+    color: @white;
+
+    &:hover {
+      color: @white-opacity60;
+    }
+
+    &:active {
+      color: @white-opacity30;
+    }
+  }
+
+  .main-nav__link--inner {
+    color: @black;
+
+    &:hover,
+    &:focus {
+      color: @black-opacity60;
+    }
+
+    &:active {
+      color: @black-opacity30;
+    }
+  }
 }

@@ -1,37 +1,178 @@
+.banner {
+  margin-bottom: 22px;
+}
+
+.banner__container {
+  margin: 0 auto;
+  width: 320px;
+  padding-top: 26px;
+
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+}
+
 .banner__title {
+  margin: 0 auto;
   text-align: center;
 }
 
 .banner__heading {
+  margin-bottom: 25px;
+  padding: 0 20px;
+
   .font(@title;
   36px;
   36px;
   400;
   @white);
-  padding: 32px 20px 0;
 }
 
 .banner__caption {
-  font-family: @title-font;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
-  text-align: center;
+  margin-bottom: 28px;
 
-  color: @white;
+  .font(@title;
+  14px;
+  14px;
+  400;
+  @white);
+
+  text-align: center;
   text-transform: uppercase;
 }
 
-.banner__wrapper {
-  min-height: 305px;
-
-  background-color: #63a73a;
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: top;
+.banner__image {
+  margin-left: 20px;
+  // margin-bottom: 8px
 }
 
-/* Позиционирование */
+.banner__button {
+  display: block;
+  margin: 0 auto;
+  padding: 11px 0;
+  width: 280px;
+
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .banner {
+    margin-bottom: 0;
+  }
+
+  .banner__container {
+    display: flex;
+    flex-direction: column;
+    width: 709px;
+    padding-top: 15px;
+
+    background: transparent;
+  }
+
+  .banner__image-container {
+    order: 4;
+    margin-top: -80px;
+  }
+
+  .banner__heading {
+    // padding: 0 30px;
+    margin-left: 68px;
+  }
+
+  .banner__title {
+    width: 470px;
+    margin-top: 0;
+    margin-bottom: 40px;
+
+    font-size: 60px;
+    line-height: 60px;
+    color: @black;
+    text-align: left;
+  }
+
+  .banner__caption {
+    padding: 0 30px;
+    margin: 0 0 47px 59px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    color: @black;
+  }
+
+  .banner__image {
+    margin-bottom: 0;
+    width: 709px;
+    height: 609px;
+  }
+
+  .banner__button {
+    margin-left: 89px;
+    padding: 16px 0;
+    width: 245px;
+    // height: 52px;
+    font-size: 20px;
+    line-height: 20px;
+    z-index: 2;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .banner {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding-top: 138px;
+    margin-bottom: 80px;
+    margin-top: 0;
+    height: 696px;
+    width: 100%;
+    background-image: url("../img/index-background-desktop@1x.jpg"), linear-gradient(to right, transparent 50%, #65a93c 50%);
+    background-position: 112%;
+    background-repeat: no-repeat;
+  }
+
+  .banner__container {
+    position: relative;
+    width: 1220px;
+    height: 696px;
+    padding-left: 80px;
+    padding-top: 85px;
+    margin-top: -137px;
+  }
+
+  .banner__heading {
+    padding: 0;
+  }
+
+  .banner__title {
+    margin: 137px 0 40px 0;
+  }
+
+  .banner__caption {
+    margin: 0 0 53px 0;
+    padding: 0;
+  }
+
+  .banner__image-container {
+    position: absolute;
+    right: 218px;
+    top: 72px;
+  }
+
+  .banner__image {
+    width: 552px;
+    height: 499px;
+    margin-top: 150px;
+  }
+
+  .banner__button {
+    margin: 0;
+  }
+}
+/* Позиционирование position top right bottom: left z-index: */
 /* Блочная модель  display: block;  float: right;  width: 100px;  height: 100px;  margin: 10px;  padding: 10px;*/
 /* Типографика */
 /* Оформление */

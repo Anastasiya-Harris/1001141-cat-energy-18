@@ -1,0 +1,31 @@
+.font(@f-family;
+@f-size;
+@l-height;
+@f-weight;
+@f-color) {
+  font-family: @f-family;
+  font-size: @f-size;
+  line-height: @l-height;
+  font-weight: @f-weight;
+  color: @f-color;
+}
+
+.list-reset() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mp-reset() {
+  margin: 0;
+  padding: 0;
+}
+
+.no-outline() {
+  outline: none;
+  background-color: transparent;
+
+  &::before {
+    display: none;
+  }
+}
