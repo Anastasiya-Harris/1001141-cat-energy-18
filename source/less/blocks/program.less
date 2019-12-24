@@ -58,7 +58,7 @@
     right: 128px;
     width: 35px;
     height: 49px;
-    background-image: url(../img/icon-cat-slim.svg);
+    background-image: url("../img/icon-cat-slim.svg");
     background-repeat: no-repeat;
   }
 }
@@ -99,6 +99,27 @@
     height: 12px;
     background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      content: "";
+      display: inline-block;
+      margin-left: 26px;
+      width: 34px;
+      height: 12px;
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &:active {
+    color: @black-opacity30;
+
+    &::after {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -170,7 +191,7 @@
     font-size: 20px;
     line-height: 20px;
 
-    &::after{
+    &::after {
       margin-left: 23px;
     }
   }
