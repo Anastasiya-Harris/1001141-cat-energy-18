@@ -22,18 +22,20 @@
   padding: 0 0 26px 80px;
 }
 
+.how-it-work__text {
+  .mp-reset;
+}
+
 .how__br {
   display: none;
 }
 
 .how-it-work__description--healthy {
-
   &::before {
     content: "";
     display: inline-block;
     position: absolute;
     left: 0;
-    // top: 4px;
     width: 60px;
     height: 60px;
     background-color: @green;
@@ -47,19 +49,17 @@
     left: 6px;
     width: 50px;
     height: 50px;
-    background-image: url(../img/advantage-leaf@1x.png);
+    background-image: url("../img/advantage-leaf@1x.png");
     background-repeat: no-repeat;
   }
 }
 
 .how-it-work__description--water {
-
   &::before {
     content: "";
     display: inline-block;
     position: absolute;
     left: 0;
-    // top: 4px;
     width: 60px;
     height: 60px;
     background-color: @green;
@@ -73,19 +73,17 @@
     left: 6px;
     width: 50px;
     height: 50px;
-    background-image: url(../img/advantage-powder@1x.png);
+    background-image: url("../img/advantage-powder@1x.png");
     background-repeat: no-repeat;
   }
 }
 
 .how-it-work__description--food {
-
   &::before {
     content: "";
     display: inline-block;
     position: absolute;
     left: 0;
-    // top: 4px;
     width: 60px;
     height: 60px;
     background-color: @green;
@@ -99,19 +97,17 @@
     left: 4px;
     width: 50px;
     height: 50px;
-    background-image: url(../img/advantage-dining@1x.png);
+    background-image: url("../img/advantage-dining@1x.png");
     background-repeat: no-repeat;
   }
 }
 
 .how-it-work__description--time {
-
   &::before {
     content: "";
     display: inline-block;
     position: absolute;
     left: 0;
-    // top: 4px;
     width: 60px;
     height: 60px;
     background-color: @green;
@@ -125,7 +121,7 @@
     left: 5px;
     width: 50px;
     height: 50px;
-    background-image: url(../img/advantage-clock@1x.png);
+    background-image: url("../img/advantage-clock@1x.png");
     background-repeat: no-repeat;
   }
 }
@@ -156,20 +152,106 @@
     padding: 185px 52px 59px 0;
     margin-right: 83px;
     width: 300px;
-    font-size: 16px;
-    line-height: 24px;
+    // counter-increment: step-counter;
 
     &:nth-child(2n) {
       margin-right: 0;
     }
   }
 
+    .how-it-work__text {
+      font-size: 16px;
+      line-height: 24px;
+
+    &--one {
+      &::after {
+        content: "1";
+        position: absolute;
+        z-index: -1;
+        left: 118px;
+        top: 73px;
+
+        .font(@title;
+        280px;
+        200px;
+        400;
+        #f2f2f2);
+      }
+    }
+
+    &--two {
+      &::after {
+        content: "2";
+        position: absolute;
+        z-index: -1;
+        left: 497px;
+        top: 73px;
+
+        .font(@title;
+        280px;
+        200px;
+        400;
+        #f2f2f2);
+      }
+    }
+
+    &--three {
+      &::after {
+        content: "3";
+        position: absolute;
+        z-index: -1;
+        left: 113px;
+        top: 390px;
+
+        .font(@title;
+        280px;
+        200px;
+        400;
+        #f2f2f2);
+      }
+    }
+
+    &--four{
+      &::after {
+        content: "4";
+        position: absolute;
+        z-index: -1;
+        left: 495px;
+        top: 390px;
+
+        .font(@title;
+        280px;
+        200px;
+        400;
+        #f2f2f2);
+      }
+    }
+  }
+
+  // .how-it-work__text {
+  //   font-size: 16px;
+  //   line-height: 24px;
+
+  //   &::before {
+  //     content: counter(step-counter);
+  //     position: relative;
+  //     z-index: -1;
+  //     left: 117px;
+  //     top: -154px;
+
+  //     .font(@title;
+  //     280px;
+  //     200px;
+  //     400;
+  //     #f2f2f2);
+  //   }
+  // }
+
   .how__br {
     display: initial;
   }
 
   .how-it-work__description--healthy {
-
     &::before {
       content: "";
       top: 72px;
@@ -187,7 +269,6 @@
   }
 
   .how-it-work__description--water {
-
     &::before {
       content: "";
       top: 72px;
@@ -206,7 +287,6 @@
   }
 
   .how-it-work__description--food {
-
     &::before {
       content: "";
       top: 389px;
@@ -217,8 +297,6 @@
 
     &::after {
       content: "";
-      display: inline-block;
-      position: absolute;
       z-index: 2;
       top: 402px;
       left: 14px;
@@ -228,7 +306,6 @@
   }
 
   .how-it-work__description--time {
-
     &::before {
       content: "";
       top: 389px;
@@ -277,8 +354,74 @@
     }
   }
 
-  .how-it-work__description--healthy {
+  .how-it-work__text {
 
+    &--one {
+      &::after {
+        content: "1";
+        position: absolute;
+        z-index: -1;
+        left: 118px;
+        top: 73px;
+
+        .font(@title;
+        281px;
+        200px;
+        400;
+        #f2f2f2);
+      }
+    }
+
+    &--two {
+      &::after {
+        content: "2";
+        position: absolute;
+        z-index: -1;
+        left: 435px;
+        top: 73px;
+
+        .font(@title;
+        281px;
+        200px;
+        400;
+        #f2f2f2);
+      }
+    }
+
+    &--three {
+      &::after {
+        content: "3";
+        position: absolute;
+        z-index: -1;
+        left: 763px;
+        top: 73px;
+
+        .font(@title;
+        281px;
+        200px;
+        400;
+        #f2f2f2);
+      }
+    }
+
+    &--four{
+      &::after {
+        content: "4";
+        position: absolute;
+        z-index: -1;
+        left: 1090px;
+        top: 73px;
+
+        .font(@title;
+        281px;
+        200px;
+        400;
+        #f2f2f2);
+      }
+    }
+  }
+
+  .how-it-work__description--healthy {
     &::before {
       content: "";
       display: inline-block;
@@ -298,13 +441,12 @@
       left: 14px;
       width: 50px;
       height: 50px;
-      background-image: url(../img/advantage-leaf@1x.png);
+      background-image: url("../img/advantage-leaf@1x.png");
       background-repeat: no-repeat;
     }
   }
 
   .how-it-work__description--water {
-
     &::before {
       content: "";
       display: inline-block;
@@ -323,7 +465,6 @@
   }
 
   .how-it-work__description--food {
-
     &::before {
       content: "";
       top: 71px;
@@ -338,7 +479,6 @@
   }
 
   .how-it-work__description--time {
-
     &::before {
       content: "";
       top: 71px;
