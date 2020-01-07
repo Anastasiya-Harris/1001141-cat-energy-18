@@ -1,13 +1,14 @@
 .form-page {
   margin: 0 auto;
-  width: 280px;
+  width: 320px;
 }
 
 .form-page__title {
-  margin: 15px 0 24px;
+  margin: 15px 0 24px 20px;
 }
 
 .form-page__subtitle {
+  margin: 0 0 40px 20px;
   .font(@title;
   14px;
   18px;
@@ -17,66 +18,6 @@
 
   text-align: left;
 }
-
-.form__legend {
-  .font(@title;
-  24px;
-  24px;
-  500;
-  @black);
-}
-
-.form__label {
-  .font(@title;
-  16px;
-  18px;
-  400;
-  @black);
-  text-transform: uppercase;
-
-  text-align: left;
-}
-
-.form__control {
-  width: auto;
-  height: 45px;
-  margin-bottom: 26px;
-
-  .font(@title;
-  16px;
-  18px;
-  400;
-  @gray-text);
-  text-transform: uppercase;
-  text-align: left;
-
-  &--text {
-    border: 1px solid @pinkish-gray;
-  }
-
-  &--textarea {
-    box-sizing: border-box;
-    height: 150px;
-  }
-}
-
-.form__fieldset {
-  border: 0 none;
-  margin-bottom: 30px;
-
-  &--border {
-    border: 1px solid @pinkish-gray;
-  }
-}
-
-.form__list {
-  .list-reset;
-}
-
-.form-page__legend {
-  text-align: center;
-}
-
 
 @media (min-width: @tablet-width) {
   .form-page {
