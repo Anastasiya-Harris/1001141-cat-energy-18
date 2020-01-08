@@ -1,5 +1,6 @@
 .form__container {
   display: flex;
+  position: relative;
 }
 
 .form__legend {
@@ -72,6 +73,19 @@
   text-transform: uppercase;
   text-align: left;
 
+  &--textarea {
+    margin: 0 auto;
+    padding: 13px;
+    min-height: 150px;
+    min-width: 100%;
+    border: 1px solid #cdcdcd;
+    // overflow-y: auto;
+  }
+
+  &--text {
+    border: 1px solid @pinkish-gray;
+  }
+
   &--radio {
     position: absolute;
     margin: -8px 0 8px 0;
@@ -92,26 +106,25 @@
       border-radius: 50%;
     }
   }
-
-  // .form__item--checkbox + .form__label--checkbox,
-// .form__item--radio + .form__label--radio {
-//   position: relative;
-// }
-
-  &--textarea {
-    margin: 0 auto;
-    padding: 13px;
-    min-height: 150px;
-    min-width: 100%;
-    border: 1px solid #cdcdcd;
-    // overflow-y: auto;
-  }
-
-  &--text {
-    border: 1px solid @pinkish-gray;
-  }
 }
 
+.form_list--radio {
+  padding-top: 34px;
+  padding-left: 87px;
+}
+
+.form_list--checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.form__item--checkbox + .form__label--checkbox,
+.form__item--radio + .form__label--radio {
+  position: relative;
+}
+
+/////////
 .form__input:active + .form__icon-email,
 .form__input:focus + .form__icon-email,
 .form__input:active + .form__icon-telephone,
@@ -126,6 +139,82 @@
 .form__input--error + svg {
   fill: #ff8282;
 }
+
+
+// .form__input--checkbox + .form__label--checkbox,
+// .form__input--radio + .form__label--radio {
+//   position: relative;
+// }
+
+// .form__input--radio + .form__label--radio::before,
+.form__input--checkbox + .form__label--checkbox::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -46px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #cdcdcd;
+}
+
+.form__label--radio::before {
+  border-radius: 50%;
+}
+
+.form__input--checkbox:checked + .form__label--checkbox::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -40px;
+  width: 22px;
+  height: 17px;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 21.1 15.5' style='enable-background:new 0 0 21.1 15.5;' xml:space='preserve' fill='%2368b738'%3E%3Cpolygon points='20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 '/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+}
+
+// .form__input--radio:checked + .form__label--radio::after {
+//   content: "";
+//   position: absolute;
+//   top: 7px;
+//   left: -37px;
+//   width: 12px;
+//   height: 12px;
+//   background-color: #68b738;
+//   border-radius: 50%;
+// }
+
+.form__input--radio:checked:active + .form__label--radio::after {
+  background-color: fade(#68b738, 30%);
+}
+
+.form__input--checkbox:hover + .form__label--checkbox::before,
+.form__input--radio:hover + .form__label--radio::before,
+.form__input--checkbox:focus + .form__label--checkbox::before,
+.form__input--radio:focus + .form__label--radio::before {
+  border: 1px solid #000000;
+}
+
+.form__input--checkbox:active + .form__label--checkbox::before,
+.form__input--radio:active + .form__label--radio::before {
+  border: 1px solid fade(black, 30%);
+}
+
+// .form__input--radio,
+.form__input--checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+///////////
 
 .form__icon-email {
   position: absolute;
@@ -183,8 +272,14 @@
   padding-right: 40px;
 }
 
-.form {
-  padding-bottom: 31px;
+// .form {
+//   padding-bottom: 31px;
+// }
+
+.form__button {
+  width: 280px;
+  padding: 10px 0;
+  margin: 14px 0 24px 20px;
 }
 
 @media (min-width: @tablet-width) {
