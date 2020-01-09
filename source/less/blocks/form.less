@@ -11,7 +11,7 @@
   .font(@title;
   24px;
   24px;
-  500;
+  400;
   @black);
 
   &--owner {
@@ -87,20 +87,35 @@
   text-transform: uppercase;
   text-align: left;
 
-  &:hover {
-
-  }
-
   &--textarea {
     margin: 0 auto;
     padding: 13px;
     min-height: 150px;
     min-width: 100%;
     border: 1px solid #cdcdcd;
+
+    &:hover {
+      border: 1px solid #cdcdcd;
+    }
   }
 
   &--text {
     border: 1px solid @pinkish-gray;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      border: 2px solid #444444;
+      opacity: 1;
+    }
+
+    &:focus:invalid {
+      border: 2px solid #ff8282;
+      opacity: 1;
+    }
   }
 
   &--radio {
@@ -140,7 +155,14 @@
   }
 }
 
-.form__input--radio:checked  {
+.form__input--radio:active {
+  &::before {
+    content: "";
+    opacity: 0.3;
+  }
+}
+
+.form__input--radio:checked {
   &::before {
     content: "";
     position: absolute;
@@ -153,25 +175,17 @@
   }
 }
 
-.form__input--radio:active {
-
-  &::before {
-    content: "";
-    opacity: 0.3;
-  }
-}
-
 .form__input--checkbox:checked,
 .form__input--checkbox:hover {
   &::before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 22px;
-  height: 17px;
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 21.1 15.5' style='enable-background:new 0 0 21.1 15.5;' xml:space='preserve' fill='%2368b738'%3E%3Cpolygon points='20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 '/%3E%3C/svg%3E%0A");
-  background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 22px;
+    height: 17px;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 21.1 15.5' style='enable-background:new 0 0 21.1 15.5;' xml:space='preserve' fill='%2368b738'%3E%3Cpolygon points='20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 '/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
   }
 }
 
@@ -191,19 +205,6 @@
   border: 1px solid fade(black, 30%);
 }
 
-// .form__input--checkbox {
-//   position: absolute;
-//   // width: 1px;
-//   // height: 1px;
-//   // margin: 1px;
-//   border: 0;
-//   padding: 0;
-//   white-space: nowrap;
-//   clip-path: inset(100%);
-//   clip: rect(0 0 0 0);
-//   overflow: hidden;
-// }
-
 .form_list--radio {
   padding-top: 34px;
   padding-left: 87px;
@@ -215,36 +216,17 @@
   padding: 0;
 }
 
-.form__item--checkbox + .form__label--checkbox,
-.form__item--radio + .form__label--radio {
-  position: relative;
+.form__input:focus:invalid + .form__icon-telephone,
+.form__input:focus:invalid + .form__icon-email {
+  fill: #ff8282;
 }
 
-/////////
 .form__input:active + .form__icon-email,
 .form__input:focus + .form__icon-email,
 .form__input:active + .form__icon-telephone,
 .form__input:focus + .form__icon-telephone {
   fill: #68b738;
 }
-
-.form__input--error {
-  border: 2px solid #ff8282;
-}
-
-.form__input--error + svg {
-  fill: #ff8282;
-}
-
-
-// .form__input--checkbox + .form__label--checkbox,
-// .form__input--radio + .form__label--radio {
-//   position: relative;
-// }
-
-
-
-///////////
 
 .form__icon-email {
   position: absolute;
@@ -286,6 +268,10 @@
   &--comment {
     margin: 0 0 25px 20px;
   }
+
+  &--additional {
+    margin: 0 0 52px 20px;
+  }
 }
 
 .form__list {
@@ -302,10 +288,6 @@
   padding-right: 40px;
 }
 
-// .form {
-//   padding-bottom: 31px;
-// }
-
 .form__button {
   width: 280px;
   padding: 10px 0;
@@ -319,6 +301,109 @@
 @media (min-width: @tablet-width) {
   .form {
     margin-bottom: 84px;
+    margin-left: 20px;
+  }
+
+  .form__label {
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 20px;
+
+    &--radio {
+      padding: 0 0 0 67px;
+    }
+
+    &--checkbox {
+      padding: 0 50px 0 57px;
+    }
+  }
+
+  .form__list--additional {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__input {
+    height: 52px;
+    margin: 0 0 20px 14px;
+    font-size: 20px;
+    line-height: 20px;
+
+    &--text {
+      margin: 0 0 20px 22px;
+    }
+
+    &--textarea {
+      min-height: 174px;
+      margin: 0 0 20px 0;
+    }
+
+    &--radio {
+      width: 40px;
+      height: 40px;
+    }
+
+    &--checkbox {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .form__legend {
+    margin-bottom: 70px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &--owner {
+      width: 560px;
+    }
+
+    &--comment {
+      width: 218px;
+      margin-bottom: 80px;
+    }
+
+    &--additional {
+      width: 205px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .form__fieldset {
+    width: 630px;
+
+    &--owner {
+      margin: 0 0 50px 20px;
+    }
+
+    &--border {
+      width: 630px;
+      margin: 0 0 80px 20px;
+      padding: 8px 14px 12px;
+    }
+
+    &--about {
+      margin: 0 0 50px 20px;
+    }
+
+    &--comment {
+      margin: 0 0 40px 20px;
+    }
+  }
+
+  .form__item {
+    margin: 0 0 32px 0;
+  }
+
+  .form-page__legend {
+    text-align: left;
+  }
+
+  .form__button {
+    width: 280px;
+    padding: 16px 0;
+    margin: 14px 0 6px 20px;
   }
 }
 
