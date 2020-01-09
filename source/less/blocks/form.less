@@ -55,6 +55,19 @@
     display: block;
     padding: 0 0 0 45px;
     margin-top: 15px;
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &--checkbox {
+    padding: 0 0 0 45px;
+    margin-top: 15px;
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -64,6 +77,7 @@
   height: 45px;
   margin: 0 0 14px 14px;
   padding-left: 14px;
+  outline: none;
 
   .font(@title;
   16px;
@@ -73,13 +87,16 @@
   text-transform: uppercase;
   text-align: left;
 
+  &:hover {
+
+  }
+
   &--textarea {
     margin: 0 auto;
     padding: 13px;
     min-height: 150px;
     min-width: 100%;
     border: 1px solid #cdcdcd;
-    // overflow-y: auto;
   }
 
   &--text {
@@ -93,20 +110,99 @@
     height: 30px;
     border-radius: 50%;
     background-color: @white;
-    box-shadow: 0 0 0 1px #cdcdcd;
+    border: 1px solid #cdcdcd;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 9px;
-      left: 9px;
-      width: 12px;
-      height: 12px;
-      background-color: @green;
-      border-radius: 50%;
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &--checkbox {
+    position: absolute;
+    margin: -8px 0 8px 0;
+    width: 30px;
+    height: 30px;
+    background-color: @white;
+    border: 1px solid #cdcdcd;
+
+    &:hover,
+    &:focus {
+      border: 1px solid #bababa;
+    }
+
+    &:checked {
+      border: 1px solid #bababa;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }
+
+.form__input--radio:checked  {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 12px;
+    height: 12px;
+    background-color: @green;
+    border-radius: 50%;
+  }
+}
+
+.form__input--radio:active {
+
+  &::before {
+    content: "";
+    opacity: 0.3;
+  }
+}
+
+.form__input--checkbox:checked,
+.form__input--checkbox:hover {
+  &::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 22px;
+  height: 17px;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 21.1 15.5' style='enable-background:new 0 0 21.1 15.5;' xml:space='preserve' fill='%2368b738'%3E%3Cpolygon points='20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 '/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  }
+}
+
+.form__input--radio:checked:active + .form__label--radio::after {
+  background-color: fade(#68b738, 30%);
+}
+
+.form__input--checkbox:hover + .form__label--checkbox::before,
+.form__input--radio:hover + .form__label--radio::before,
+.form__input--checkbox:focus + .form__label--checkbox::before,
+.form__input--radio:focus + .form__label--radio::before {
+  border: 1px solid #000000;
+}
+
+.form__input--checkbox:active + .form__label--checkbox::before,
+.form__input--radio:active + .form__label--radio::before {
+  border: 1px solid fade(black, 30%);
+}
+
+// .form__input--checkbox {
+//   position: absolute;
+//   // width: 1px;
+//   // height: 1px;
+//   // margin: 1px;
+//   border: 0;
+//   padding: 0;
+//   white-space: nowrap;
+//   clip-path: inset(100%);
+//   clip: rect(0 0 0 0);
+//   overflow: hidden;
+// }
 
 .form_list--radio {
   padding-top: 34px;
@@ -146,73 +242,7 @@
 //   position: relative;
 // }
 
-// .form__input--radio + .form__label--radio::before,
-.form__input--checkbox + .form__label--checkbox::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -46px;
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  border: 1px solid #cdcdcd;
-}
 
-.form__label--radio::before {
-  border-radius: 50%;
-}
-
-.form__input--checkbox:checked + .form__label--checkbox::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: -40px;
-  width: 22px;
-  height: 17px;
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 21.1 15.5' style='enable-background:new 0 0 21.1 15.5;' xml:space='preserve' fill='%2368b738'%3E%3Cpolygon points='20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 '/%3E%3C/svg%3E%0A");
-  background-repeat: no-repeat;
-}
-
-// .form__input--radio:checked + .form__label--radio::after {
-//   content: "";
-//   position: absolute;
-//   top: 7px;
-//   left: -37px;
-//   width: 12px;
-//   height: 12px;
-//   background-color: #68b738;
-//   border-radius: 50%;
-// }
-
-.form__input--radio:checked:active + .form__label--radio::after {
-  background-color: fade(#68b738, 30%);
-}
-
-.form__input--checkbox:hover + .form__label--checkbox::before,
-.form__input--radio:hover + .form__label--radio::before,
-.form__input--checkbox:focus + .form__label--checkbox::before,
-.form__input--radio:focus + .form__label--radio::before {
-  border: 1px solid #000000;
-}
-
-.form__input--checkbox:active + .form__label--checkbox::before,
-.form__input--radio:active + .form__label--radio::before {
-  border: 1px solid fade(black, 30%);
-}
-
-// .form__input--radio,
-.form__input--checkbox {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: 1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 
 ///////////
 
@@ -279,7 +309,11 @@
 .form__button {
   width: 280px;
   padding: 10px 0;
-  margin: 14px 0 24px 20px;
+  margin: 14px 0 6px 20px;
+}
+
+.form-page__legend {
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
