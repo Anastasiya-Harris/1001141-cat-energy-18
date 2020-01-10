@@ -5,22 +5,17 @@
 }
 
 .social__link {
-  &--vkontakte {
-    content: url("../img/icon-vk.svg");
-    width: 22px;
-    height: 12px;
+
+  fill: #666666;
+
+  &:hover,
+  &:focus {
+    fill: @green;
   }
 
-  &--instagram {
-    content: url("../img/icon-insta.svg");
-    width: 17px;
-    height: 17px;
-  }
-
-  &--facebook {
-    content: url("../img/icon-fb.svg");
-    width: 10px;
-    height: 19px;
+  &:active {
+    fill: @green;
+    fill-opacity: 0.3;
   }
 }
 
@@ -36,7 +31,6 @@
   min-height: 62px;
   display: flex;
   justify-content: space-between;
-  // flex-wrap: wrap;
   align-items: center;
 }
 
