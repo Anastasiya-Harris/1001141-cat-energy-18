@@ -373,18 +373,6 @@
     }
   }
 
-
-  .form__input--checkbox:checked,
-  .form__input--checkbox:hover {
-    &::before {
-      content: "";
-      top: 10px;
-      left: 10px;
-      width: 21px;
-      height: 16px;
-    }
-  }
-
   .form__legend {
     margin-bottom: 76px;
     width: auto;
@@ -495,28 +483,33 @@
 
     &--owner {
       width: 1200px;
+      margin: 0 0 46px 0;
     }
 
     &--border {
       width: 570px;
-      padding: 11px 28px 0px;
+      padding: 11px 28px 0;
       height: 196px;
     }
 
-    &--about {
-
-    }
-
     &--comment {
-
+      margin: 0 0 39px 0;
     }
 
     &--additional {
-      width: 690px;
+      width: 1220px;
     }
   }
 
   .form__list--radio li:last-child {
     margin-bottom: 0;
+  }
+
+  .form__legend--additional {
+    margin-bottom: 66px;
+  }
+
+  .form__input--textarea {
+    width: 1200px;
   }
 }
