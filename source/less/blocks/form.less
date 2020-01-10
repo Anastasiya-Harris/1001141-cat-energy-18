@@ -127,9 +127,9 @@
     background-color: @white;
     border: 1px solid #cdcdcd;
 
-    &:active {
-      opacity: 0.3;
-    }
+    // &:active {
+    //   opacity: 0.3;
+    // }
   }
 
   &--checkbox {
@@ -310,18 +310,19 @@
     line-height: 20px;
 
     &--radio {
-      padding: 0 0 0 67px;
+      padding: 12px 0 0 60px;
+      margin-top: 12px;
     }
 
     &--checkbox {
-      padding: 0 50px 0 57px;
+      padding: 0 0 0 57px;
     }
   }
 
   .form__list--additional {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 0;
   }
 
   .form__input {
@@ -331,29 +332,53 @@
     line-height: 20px;
 
     &--text {
-      margin: 0 0 20px 22px;
+      height: 52px;
+      padding-left: 21px;
+      margin: 0 0 20px 14px;
     }
 
     &--textarea {
       min-height: 174px;
       margin: 0 0 20px 0;
+      padding: 13px 18px;
     }
 
     &--radio {
       width: 40px;
       height: 40px;
+      margin: 2px 0 20px 0;
+
+      &:checked::before {
+        content: "";
+        top: 10px;
+        left: 10px;
+      }
     }
 
     &--checkbox {
       width: 40px;
       height: 40px;
+      margin: -8px 0 20px 0;
+
+      &:checked::before {
+        content: "";
+        top: 10px;
+        left: 10px;
+        width: 18px;
+        height: 18px;
+      }
     }
   }
 
   .form__legend {
-    margin-bottom: 70px;
+    margin-bottom: 76px;
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      content: "";
+      top: 23px;
+    }
 
     &--owner {
       width: 560px;
@@ -361,12 +386,12 @@
 
     &--comment {
       width: 218px;
-      margin-bottom: 80px;
+      margin-bottom: 78px;
     }
 
     &--additional {
-      width: 205px;
-      margin-bottom: 40px;
+      width: 252px;
+      margin-bottom: 63px;
     }
   }
 
@@ -374,36 +399,47 @@
     width: 630px;
 
     &--owner {
-      margin: 0 0 50px 20px;
+      margin: 0 0 44px 20px;
     }
 
     &--border {
       width: 630px;
-      margin: 0 0 80px 20px;
-      padding: 8px 14px 12px;
+      margin: 0 0 77px 20px;
+      padding: 8px 28px 16px;
     }
 
     &--about {
-      margin: 0 0 50px 20px;
+      margin: 0 0 52px 20px;
     }
 
     &--comment {
       margin: 0 0 40px 20px;
     }
+
+    &--additional {
+      width: 690px;
+      margin: 0 0 3px 20px;
+    }
   }
 
   .form__item {
     margin: 0 0 32px 0;
-  }
 
-  .form-page__legend {
-    text-align: left;
+    &--checkbox {
+      width: 345px;
+      margin-bottom: 47px;
+    }
+
+    &--radio {
+      margin: 0 0 20px 0;
+    }
   }
 
   .form__button {
     width: 280px;
     padding: 16px 0;
     margin: 14px 0 6px 20px;
+    font-size: 20px;
   }
 }
 
