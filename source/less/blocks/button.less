@@ -1,5 +1,6 @@
 //* Button less*//
 .button {
+  display: block;
   padding: 10px;
   min-width: 280px;
 
@@ -10,18 +11,26 @@
 
   text-align: center;
   color: @white;
-  vertical-align: middle;
   text-transform: uppercase;
+  word-wrap: break-word;
 
   background-color: @green;
   border: none;
 
   &:active {
     color: @white-opacity30;
+    background-color: @dark-green;
   }
 
   &:hover,
   &:focus {
     background-color: @dark-green;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
