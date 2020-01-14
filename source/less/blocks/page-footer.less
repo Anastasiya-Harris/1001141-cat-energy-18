@@ -165,7 +165,7 @@
     background-size: 768px auto;
     //Поставить 2х изображение//
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/bg-map-tablet@1x.png");
+      background-image: url("../img/bg-map-tablet@2x.png");
     }
   }
 
@@ -202,6 +202,10 @@
     padding: 66px 64px 62px;
     width: 570px;
     height: 201px;
+
+    &--inner-page {
+      background-color: @white;
+    }
   }
 
   .page-footer__map {
@@ -211,9 +215,9 @@
   .page-footer__map-image {
     background-image: url("../../img/bg-map-desktop@1x.png");
     background-size: cover;
-    //Поставить 2х изображение//
+
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../../img/bg-map-desktop@1x.png");
+      background-image: url("../../img/bg-map-desktop@2x.png");
     }
   }
 
