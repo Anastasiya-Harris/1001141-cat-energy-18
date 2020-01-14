@@ -51,7 +51,6 @@
 
 .banner__image {
   margin-left: 20px;
-  // margin-bottom: 8px
 }
 
 .banner__button {
@@ -119,7 +118,6 @@
     margin-left: 89px;
     padding: 16px 0;
     width: 245px;
-    // height: 52px;
     font-size: 20px;
     line-height: 20px;
     z-index: 2;
@@ -129,22 +127,16 @@
 @media (min-width: @desktop-width) {
   .banner {
     position: relative;
-    z-index: 1;
     display: block;
+    z-index: 1;
+    height: 696px;
     padding-top: 138px;
     margin-bottom: 80px;
-    margin-top: 0;
-    height: 696px;
-    width: 100%;
-    background-image: url("../img/index-background-desktop@1x.jpg"),  right no-repeat, linear-gradient(to right, #ffffff, #ffffff 50%, #65a93c 50%, #65a93c 100%);
+    background: url("../img/index-background-desktop@1x.jpg") right no-repeat, linear-gradient(to right, #ffffff, #ffffff 50%, #65a93c 50%, #65a93c 100%);
     background-position: 112%;
-    background-repeat: no-repeat;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      .banner {
-        background-image: url("../img/index-background-desktop@2x.jpg")  right no-repeat 50%, linear-gradient(to right, #ffffff, #ffffff 50%, #65a93c 50%, #65a93c 100%);
-        background-size: contain;
-      }
+      background: url("../img/index-background-desktop@2x.jpg") right no-repeat 50%, linear-gradient(to right, #ffffff, #ffffff 50%, #65a93c 50%, #65a93c 100%);
     }
   }
 
@@ -155,8 +147,6 @@
     padding-left: 80px;
     padding-top: 85px;
     margin-top: -137px;
-
-
   }
 
   .banner__heading {
@@ -187,5 +177,11 @@
   .banner__button {
     margin: 0;
     min-width: 245px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .banner {
+    background-position: 100%;
   }
 }
