@@ -85,6 +85,8 @@
   margin: 0 0 14px 0;
   padding-left: 14px;
   outline: none;
+  border: 1px solid #cdcdcd;
+  opacity: 0.5;
 
   .font(@title;
   16px;
@@ -546,16 +548,33 @@
     margin-right: -20px;
   }
 
+  .form__label {
+    &--owner {
+      margin-right: 24px;
+    }
+  }
+
   .form__input {
+
     &--text {
       width: 418px;
       margin: 0 0 20px 0;
       padding-left: 16px;
     }
 
+    &--owner {
+      margin: 0 0 20px 0;
+      padding-left: 16px;
+
+    // &:nth-child(2) {
+    //   margin: 0 -1px 14px 0;
+    // }
+    }
+
     &--textarea {
       width: 1220px;
       margin: 0 0 20px 0;
+      padding: 13px 18px;
     }
   }
 
