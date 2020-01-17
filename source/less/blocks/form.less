@@ -41,6 +41,7 @@
 }
 
 .form__label {
+  position: relative;
   margin-top: 13px;
 
   .font(@title;
@@ -78,8 +79,37 @@
   }
 }
 
+// ///////////////////////////
+// .form__label--checkbox {
+//   &::before {
+//     content: " ";
+//     position: absolute;
+//     margin: -6px 0 0 0;
+//     top: 3px;
+//     left: 0;
+//     width: 30px;
+//     height: 30px;
+//     background-color: @white;
+//     border: 1px solid #cdcdcd;
+//   }
+// }
+
+// .form__label--checkbox:checked,
+// .form__label--checkbox:hover {
+//   &::after  {
+//     content: " ";
+//     position: absolute;
+//     top: 5px;
+//     left: 5px;
+//     width: 22px;
+//     height: 17px;
+//     background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 21.1 15.5' style='enable-background:new 0 0 21.1 15.5;' xml:space='preserve' fill='%2368b738'%3E%3Cpolygon points='20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 '/%3E%3C/svg%3E%0A");
+//     background-repeat: no-repeat;
+//   }
+// }
+
+//////////////////////////////
 .form__input {
-  appearance: none;
   flex-grow: 1;
   height: 45px;
   margin: 0 0 14px 0;
@@ -174,7 +204,7 @@
 
 .form__input--radio:checked {
   &::before {
-    content: "";
+    content: " ";
     position: absolute;
     top: 8px;
     left: 8px;
@@ -188,8 +218,9 @@
 .form__input--checkbox:checked,
 .form__input--checkbox:hover {
   &::before {
-    content: "";
+    content: " ";
     position: absolute;
+    display: block;
     top: 5px;
     left: 5px;
     width: 22px;
@@ -207,12 +238,12 @@
 .form__input--radio:hover + .form__label--radio::before,
 .form__input--checkbox:focus + .form__label--checkbox::before,
 .form__input--radio:focus + .form__label--radio::before {
-  border: 1px solid #000000;
+  border: 1px solid @black;
 }
 
 .form__input--checkbox:active + .form__label--checkbox::before,
 .form__input--radio:active + .form__label--radio::before {
-  border: 1px solid fade(black, 30%);
+  border: 1px solid @black-opacity30;
 }
 
 .form_list--radio {
@@ -235,7 +266,7 @@
 .form__input:focus + .form__icon-email,
 .form__input:active + .form__icon-telephone,
 .form__input:focus + .form__icon-telephone {
-  fill: #68b738;
+  fill: @green;
 }
 
 .form__icon-email {
@@ -358,6 +389,10 @@
       margin: 0 0 20px 0;
     }
 
+    // &--owner:nth-child(2n) {
+    //   margin-left: -6px;
+    // }
+
     &--textarea {
       min-height: 174px;
       margin: 0 0 20px 0;
@@ -391,6 +426,10 @@
         width: 21px;
         height: 16px;
       }
+    }
+
+    .form__container--owner:nth-child(2n) .form__input--owner {
+      margin-left: -6px;
     }
   }
 
@@ -430,7 +469,7 @@
 
     &--additional {
       width: 292px;
-      margin-bottom: 63px;
+      margin-bottom: 66px;
     }
   }
 
@@ -461,8 +500,15 @@
     }
   }
 
+  .form__container {
+    display: flex;
+    justify-content: space-between;
+    width: 630px;
+  }
+
   .form__item {
     margin: 0 0 32px 0;
+    margin-top: 3px;
 
     &--checkbox {
       width: 345px;
@@ -498,9 +544,7 @@
   }
 
   .form__container {
-    &--owner {
-      width: 572px;
-    }
+    width: 570px;
   }
 
   .form__fieldset {
@@ -513,13 +557,13 @@
     }
 
     &--border {
-      width: 572px;
+      width: 570px;
       padding: 11px 28px 0;
       height: 196px;
     }
 
     &--comment {
-      margin: 0 0 39px 0;
+      margin: 0 0 43px 0;
     }
 
     &--additional {
@@ -536,8 +580,9 @@
     margin-bottom: 75px;
 
     &--additional {
-      margin-bottom: 66px;
+      margin-bottom: 64px;
     }
+
     &--comment {
       margin-bottom: 77px;
     }
@@ -550,12 +595,11 @@
 
   .form__label {
     &--owner {
-      margin-right: 24px;
+      margin-right: 19px;
     }
   }
 
   .form__input {
-
     &--text {
       width: 418px;
       margin: 0 0 20px 0;
@@ -565,11 +609,15 @@
     &--owner {
       margin: 0 0 20px 0;
       padding-left: 16px;
+    }
+
+    .form__input-owner:nth-child(2n-1) {
+      margin: 0 -1px 14px 0;
+    }
 
     // &:nth-child(2) {
     //   margin: 0 -1px 14px 0;
     // }
-    }
 
     &--textarea {
       width: 1220px;

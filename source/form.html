@@ -59,15 +59,15 @@
       <fieldset class="form__fieldset form__fieldset--border">
         <ul class="form__list form__list--radio">
           <li class="form__item form__item--radio">
-            <input class="form__input form__input--radio" type="radio" name="goal" value="weight-loss" checked>
+            <input class="form__input form__input--radio visually-hidden" type="radio" name="goal" value="weight-loss" checked>
             <label class="form__label form__label--radio">Похудение</label>
           </li>
           <li class="form__item form__item--radio">
-            <input class="form__input form__input--radio" type="radio" name="goal" value="weight-gain">
+            <input class="form__input form__input--radio visually-hidden" type="radio" name="goal" value="weight-gain">
             <label class="form__label form__label--radio">Набор массы</label>
           </li>
           <li class="form__item  form__item--radio">
-            <input class="form__input form__input--radio" type="radio" name="goal" id="goal" value="do-not-now">
+            <input class="form__input form__input--radio visually-hidden" type="radio" name="goal" id="goal" value="do-not-now">
             <label for="goal" class="form__label form__label--radio">Не знаю (нужен ваш совет)</label>
           </li>
         </ul>
@@ -106,19 +106,19 @@
         <legend class="form__legend form__legend--additional">Дополнительно</legend>
         <ul class="form__list form__list--additional">
           <li class="form__item form__item--checkbox">
-            <input class="form__input form__input--checkbox" type="checkbox" name="additional" value ="Sweetener" checked>
+            <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="additional" value ="Sweetener" checked>
             <label class="form__label form__label--checkbox">Сахарозаменитель</label>
           </li>
           <li class="form__item form__item--checkbox">
-            <input class="form__input form__input--checkbox" type="checkbox" name="additional" value ="Drinking-water">
+            <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="additional" value ="Drinking-water">
             <label class="form__label form__label--checkbox">Питьевая вода</label>
           </li>
           <li class="form__item form__item--checkbox">
-            <input class="form__input form__input--checkbox" type="checkbox" name="additional" value ="Milk">
+            <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="additional" value ="Milk">
             <label class="form__label form__label--checkbox">Молоко</label>
           </li>
-          <li>
-            <input class="form__input form__input--checkbox" type="checkbox" name="additional" value ="Vitamins">
+          <li class="form__item form__item--checkbox" >
+            <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="additional" value ="Vitamins">
             <label class="form__label form__label--checkbox">Витамины</label>
           </li>
         </ul class="form__option">
@@ -177,7 +177,7 @@
           </a>
         </div>
       </div>
-
   </footer>
+  <script src="js/picturefill.min.js"></script>
   </body>
 </html>
