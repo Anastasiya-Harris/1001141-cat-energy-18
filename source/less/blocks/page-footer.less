@@ -1,5 +1,5 @@
 .page-footer {
-  width: 320px;
+  width: 100%;
   margin: 0 auto;
   background-color: @gray;
 }
@@ -12,6 +12,7 @@
 .page-footer__map-image {
   width: 100%;
   height: 362px;
+  margin-bottom: 40px;
   background: url("../../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
   background-position-x: center;
@@ -19,11 +20,13 @@
 }
 
 .page-footer__contacts {
+  z-index: 0;
   display: flex;
   order: -1;
-
+  margin-bottom: -40px;
   padding: 29px 19px 28px;
   background-color: @white;
+
 
   &--inner-page {
     background-color: @gray;
@@ -126,13 +129,10 @@
 
 
 @media (min-width: @tablet-width) {
-  .page-footer {
-    width: @tablet-width;
-  }
-
   .page-footer__contacts {
     justify-content: space-between;
     padding: 65px 70px 61px;
+    margin-bottom: 0;
   }
 
   .page-footer__call-to-action {
@@ -154,6 +154,7 @@
   }
 
   .page-footer__map-image {
+    margin-bottom: 0;
     height: 400px;
     background-image: url("../img/bg-map-tablet@1x.png");
     background-size: 768px auto;
@@ -184,7 +185,6 @@
 
 @media (min-width: @desktop-width) {
   .page-footer {
-    width: 100%;
     position: relative;
   }
 
