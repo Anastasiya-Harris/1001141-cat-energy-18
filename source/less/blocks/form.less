@@ -82,8 +82,7 @@
   margin: 0;
   padding-left: 14px;
   outline: none;
-  border: 1px solid @pinkish-gray;
-  opacity: 0.5;
+  border: 1px solid @pinkish-gray50;
 
   .font(@title;
   16px;
@@ -94,17 +93,15 @@
   text-align: left;
 
   &:hover {
-    opacity: 1;
+    border: 1px solid @pinkish-gray;
   }
 
   &:active {
     border: 2px solid #444444;
-    opacity: 1;
   }
 
   &:focus:invalid {
     border: 2px solid #ff8282;
-    opacity: 1;
   }
 
   &--textarea {
@@ -112,10 +109,14 @@
     padding: 11px 13px;
     min-height: 150px;
     min-width: 100%;
-    border: 1px solid #cdcdcd;
+    border: 1px solid @pinkish-gray50;
 
     &:hover {
-      border: 1px solid #cdcdcd;
+      border: 1px solid @pinkish-gray;
+    }
+
+    &:active {
+      border: 2px solid #444444;
     }
   }
 }
