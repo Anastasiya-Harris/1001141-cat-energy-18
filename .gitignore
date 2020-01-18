@@ -10,6 +10,4 @@ node_modules/
 npm-debug.*
 build/
 source/resource
-source/css/*.css
-source/css/*.map
 Thumbs.db
