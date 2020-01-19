@@ -58,6 +58,11 @@
   @black);
   text-transform: uppercase;
   text-align: left;
+
+  &:focus,
+  &:hover {
+    color: @gray-text-opacity30;
+  }
 }
 
 .form__label--weight {
@@ -92,7 +97,8 @@
   text-transform: uppercase;
   text-align: left;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border: 1px solid @pinkish-gray;
   }
 
@@ -146,14 +152,17 @@
   height: 30px;
   background-color: transparent;
   background-position: 0 0;
-  border: 1px solid #cdcdcd;
+  border: 1px solid @pinkish-gray50;
 }
 
 .form__label--radio::before {
   border-radius: 50%;
 }
 
-.form__checkbox:checked + .form__label--checkbox::after {
+.form__checkbox:checked + .form__label--checkbox::after,
+.form__checkbox:hover + .form__label--checkbox::after,
+.form__checkbox:focus + .form__label--checkbox::after,
+.form__checkbox:active + .form__label--checkbox::after {
   content: "";
   position: absolute;
   top: 5px;
@@ -163,6 +172,10 @@
   height: 17px;
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 21.1 15.5' style='enable-background:new 0 0 21.1 15.5;' xml:space='preserve' fill='%2368b738'%3E%3Cpolygon points='20.1,0 7.7,13.3 1,6.1 0,7.2 7.6,15.4 7.7,15.5 21,1.2 21.1,1.1 '/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
+}
+
+.form__checkbox:active + .form__label--checkbox::after {
+  opacity: 30%;
 }
 
 .form__radio:checked + .form__label--radio::after {
@@ -177,14 +190,26 @@
 }
 
 .form__radio:checked:active + .form__label--radio::after {
-  background-color: fade(@green, 30%);
+  background-color: @green30;
+}
+
+.form__radio:hover + .form__label--radio::after,
+.form__radio:focus + .form__label--radio::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -37px;
+  width: 12px;
+  height: 12px;
+  background-color: @green30;
+  border-radius: 50%;
 }
 
 .form__checkbox:hover + .form__label--checkbox::before,
 .form__radio:hover + .form__label--radio::before,
 .form__checkbox:focus + .form__label--checkbox::before,
 .form__radio:focus + .form__label--radio::before {
-  border: 1px solid @black;
+  border: 1px solid @pinkish-gray;
 }
 
 .form__checkbox:active + .form__label--checkbox::before,
@@ -256,7 +281,7 @@
     position: relative;
     width: 320px;
     margin-bottom: 29px;
-    border: 1px solid @pinkish-gray;
+    border: 1px solid @pinkish-gray50;
   }
 
   &--about {
@@ -343,27 +368,24 @@
     content: "";
     width: 40px;
     height: 40px;
-    top: -4px;
-    left: -59px;
   }
 
-  .form__radio:checked + .form__label--radio::after {
-    top: 7px;
-    left: -48px;
+  .form__checkbox:checked + .form__label--checkbox::after,
+  .form__checkbox:hover + .form__label--checkbox::after,
+  .form__checkbox:focus + .form__label--checkbox::after,
+  .form__checkbox:active + .form__label--checkbox::after {
+    content: "";
+    top: 9px;
+    left: -35px;
+  }
+
+  .form__radio:checked + .form__label--radio::after,
+  .form__radio:hover + .form__label--radio::after,
+  .form__radio:focus + .form__label--radio::after {
+    top: 9px;
+    left: -35px;
     width: 18px;
     height: 18px;
-  }
-
-  .form__checkbox:checked + .form__label--checkbox::before,
-  .form__checkbox:hover + .form__label--checkbox::before {
-    content: "";
-    width: 40px;
-    height: 40px;
-  }
-
-  .form__checkbox:checked + .form__label--checkbox::after {
-    top: 6px;
-    left: -48px;
   }
 
   .form__input {
