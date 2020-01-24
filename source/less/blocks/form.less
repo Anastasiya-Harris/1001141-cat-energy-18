@@ -98,10 +98,12 @@
 
   &:active {
     border: 2px solid #444444;
+    padding-left: 13px;
   }
 
   &:focus:invalid {
     border: 2px solid #ff8282;
+    padding-left: 13px;
   }
 
   &--textarea {
@@ -117,6 +119,7 @@
 
     &:active {
       border: 2px solid #444444;
+      padding: 10px 12px;
     }
   }
 }
@@ -256,7 +259,7 @@
     position: relative;
     width: 320px;
     margin-bottom: 29px;
-    border: 1px solid @pinkish-gray;
+    border: 1px solid @pinkish-gray50;
   }
 
   &--about {
@@ -372,10 +375,23 @@
     font-size: 20px;
     line-height: 20px;
 
+    &:active {
+      padding-left: 19px;
+    }
+
+    &:focus:invalid {
+      padding-left: 19px;
+    }
+
     &--textarea {
       min-height: 174px;
       margin: 0 0 20px 0;
       padding: 14px 18px;
+
+      &:active {
+        border: 2px solid #444444;
+        padding: 13px 17px;
+      }
     }
   }
 
@@ -554,6 +570,14 @@
   .form__input {
     padding-left: 18px;
 
+    &:active {
+      padding-left: 17px;
+    }
+
+    &:focus:invalid {
+      padding-left: 17px;
+    }
+
     &--owner {
       margin: 0 0 20px 0;
       padding-left: 16px;
@@ -567,6 +591,10 @@
       width: 1220px;
       margin: 0 0 20px 0;
       padding: 13px 18px;
+
+      &:active {
+        padding: 12px 17px;
+      }
     }
   }
 

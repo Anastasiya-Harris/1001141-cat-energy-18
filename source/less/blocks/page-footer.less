@@ -17,6 +17,13 @@
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
+  border: 0 none;
+}
+
+.page-footer__map-container {
+  width: 100%;
+  border: 0 none;
+  height: 400px;
 }
 
 .page-footer__contacts {
@@ -72,8 +79,7 @@
 }
 
 .page-footer__logo {
-  margin: 0 auto;
-  padding: 39px 0 31px;
+  margin: 38px auto 31px;
 
   &:hover,
   &:focus {
@@ -89,7 +95,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 17px 20px;
+  padding: 22px 20px;
 }
 
 .page-footer__author {
@@ -98,14 +104,12 @@
   16px;
   400;
   @gray-text);
+  margin-bottom: 5px;
+  white-space: nowrap;
 
   &:active {
     color: @gray-text-opacity30;
   }
-}
-
-.page-footer__logo-conteiner {
-  padding-left: 10px;
 }
 
 .page-footer__logo-htmlacademy {
@@ -170,8 +174,9 @@
   }
 
   .page-footer__logo {
-    margin: 0 30px 0;
-    padding: 0 0;
+    // margin: 0 30px 0;
+    margin: 19px 20px;
+    padding: 0;
   }
 
   .page-footer__logo-conteiner {
@@ -219,6 +224,7 @@
     width: 1220px;
     height: 150px;
     padding-bottom: 29px;
+    padding: 63px 0 35px;
   }
 
   .page-footer__logo {
@@ -227,9 +233,11 @@
 
   .page-footer__social {
     padding: 6px 0 0 15px;
+    margin-top: -25px;
   }
 
   .page-footer__copyright {
     padding: 0 0;
+    margin-bottom: 22px;
   }
 }
